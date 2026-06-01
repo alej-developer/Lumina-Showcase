@@ -1,5 +1,70 @@
 # Lumina - Product Showcase ✨
 
+*(English version below)*
+
+> **Nota:** Este es un repositorio de exhibición creado para reclutadores y evaluaciones técnicas. El código completo contiene lógica de negocio propietaria y configuraciones sensibles, por lo que aquí solo se presentan muestras arquitectónicas cuidadosamente seleccionadas y capturas de la interfaz.
+
+Bienvenido a **Lumina**, una plataforma moderna de gestión y clasificación financiera. Lumina utiliza un motor de reglas para categorizar automáticamente los movimientos bancarios, brindando a las empresas una visión clara de su flujo de caja.
+
+## 📸 Capturas de la Aplicación
+
+- **Vista General del Dashboard:**
+  ![Dashboard Overview](assets/screenshots/dashboard.png)
+
+- **Pantalla de Inicio de Sesión:**
+  ![Login Screen](assets/screenshots/login.png)
+
+- **Gestión de Reglas:**
+  ![Rules Management](assets/screenshots/rules.png)
+
+---
+
+## 🛠 Stack Tecnológico
+
+Lumina está construida con una arquitectura robusta, moderna y escalable:
+
+**Frontend:**
+- **Next.js (React)** para páginas rápidas con renderizado del lado del servidor y generación estática.
+- **NextUI & Tailwind CSS** para una interfaz altamente responsiva, inspirada en "glassmorphism" y accesible.
+- **Lucide React** para una iconografía consistente.
+
+**Backend:**
+- **Python 3 & FastAPI** para APIs REST asíncronas de alto rendimiento.
+- **SQLAlchemy (Async)** para interacciones robustas con la base de datos mediante ORM.
+- **PostgreSQL** como base de datos relacional principal.
+- **Motor de Reglas Personalizado** para la categorización inteligente de datos financieros.
+
+---
+
+## 🏗 Puntos Clave de la Arquitectura
+
+### 1. Motor de Reglas Extensible
+El backend implementa un motor de reglas altamente desacoplado que clasifica las transacciones financieras entrantes. Prioriza las reglas definidas por el usuario en la base de datos, recurriendo a reglas semilla genéricas (hardcoded) cuando no hay coincidencias exactas. Esto asegura una alta tasa de aciertos manteniendo la flexibilidad del sistema.
+
+### 2. UI Basada en Componentes
+El frontend utiliza una arquitectura orientada a componentes con NextUI. Pantallas como el `LoginPage` gestionan su estado de forma local y se comunican de forma segura con el backend. Emplea patrones modernos de React y efectos visuales muy atractivos (gradientes, desenfoques).
+
+### 3. Modelos de Datos Seguros y Escalables
+La base de datos utiliza modelos bien definidos en SQLAlchemy, garantizando la integridad de los datos. Aplicamos prácticas estándar de la industria como hash de contraseñas, control de acceso basado en roles y un riguroso registro de fechas (timestamps).
+
+---
+
+## 📁 Muestras de Código
+
+En el directorio `code-samples/`, puedes encontrar algunos fragmentos seleccionados que demuestran el estilo de programación, estructura y arquitectura del proyecto:
+
+- **`code-samples/frontend/LoginPage.tsx`**: Demuestra la integración de componentes de NextUI, manejo de estado y llamadas a API en React.
+- **`code-samples/backend/rules_engine.py`**: Muestra la lógica principal utilizada para clasificar movimientos de banco basándose en palabras clave y prioridad de reglas.
+- **`code-samples/backend/user_model.py`**: Un modelo estándar de SQLAlchemy que ilustra cómo estructuramos las entidades de base de datos de manera segura.
+
+## 📬 Contacto
+Si deseas ver una demostración en vivo o hablar en detalle sobre la arquitectura de este proyecto, ¡por favor contáctame directamente!
+
+---
+---
+
+# Lumina - Product Showcase (English) ✨
+
 > **Note:** This is a showcase repository tailored for recruiters and technical evaluations. The full codebase contains proprietary business logic and sensitive configurations, which is why only carefully selected architectural samples and UI screenshots are presented here.
 
 Welcome to **Lumina**, a modern financial classification and management platform. Lumina leverages powerful rules engines to automatically categorize bank movements, providing businesses with clear insights into their cash flow.
