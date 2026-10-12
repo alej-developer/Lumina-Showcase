@@ -25,7 +25,7 @@ Lumina está construida con una arquitectura robusta, moderna y escalable:
 
 **Frontend:**
 - **Next.js (React)** para páginas rápidas con renderizado del lado del servidor y generación estática.
-- **NextUI & Tailwind CSS** para una interfaz altamente responsiva, inspirada en "glassmorphism" y accesible.
+- **HeroUI & Tailwind CSS** para una interfaz sobria, accesible y consistente: paleta azul marino, sin gradientes ni efectos de brillo.
 - **Lucide React** para una iconografía consistente.
 
 **Backend:**
@@ -42,7 +42,7 @@ Lumina está construida con una arquitectura robusta, moderna y escalable:
 El backend implementa un motor de reglas altamente desacoplado que clasifica las transacciones financieras entrantes. Prioriza las reglas definidas por el usuario en la base de datos, recurriendo a reglas semilla genéricas (hardcoded) cuando no hay coincidencias exactas. Esto asegura una alta tasa de aciertos manteniendo la flexibilidad del sistema.
 
 ### 2. UI Basada en Componentes
-El frontend utiliza una arquitectura orientada a componentes con NextUI. Pantallas como el `LoginPage` gestionan su estado de forma local y se comunican de forma segura con el backend. Emplea patrones modernos de React y efectos visuales muy atractivos (gradientes, desenfoques).
+El frontend utiliza una arquitectura orientada a componentes con HeroUI. Pantallas como el `LoginPage` gestionan su estado de forma local y se comunican de forma segura con el backend. El lenguaje visual es deliberadamente sobrio: azul marino plano, tipografía clara y espacio en blanco, pensado para que asesorías y pymes trabajen sin distracciones.
 
 ### 3. Modelos de Datos Seguros y Escalables
 La base de datos utiliza modelos bien definidos en SQLAlchemy, garantizando la integridad de los datos. Aplicamos prácticas estándar de la industria como hash de contraseñas, control de acceso basado en roles y un riguroso registro de fechas (timestamps).
@@ -53,7 +53,7 @@ La base de datos utiliza modelos bien definidos en SQLAlchemy, garantizando la i
 
 En el directorio `code-samples/`, puedes encontrar algunos fragmentos seleccionados que demuestran el estilo de programación, estructura y arquitectura del proyecto:
 
-- **`code-samples/frontend/LoginPage.tsx`**: Demuestra la integración de componentes de NextUI, manejo de estado y llamadas a API en React.
+- **`code-samples/frontend/LoginPage.tsx`**: Demuestra la integración de componentes de HeroUI, manejo de estado y llamadas a API en React, con el diseño sobrio actual.
 - **`code-samples/backend/rules_engine.py`**: Muestra la lógica principal utilizada para clasificar movimientos de banco basándose en palabras clave y prioridad de reglas.
 - **`code-samples/backend/user_model.py`**: Un modelo estándar de SQLAlchemy que ilustra cómo estructuramos las entidades de base de datos de manera segura.
 
@@ -88,7 +88,7 @@ Lumina is built with a robust, modern, and scalable architecture:
 
 **Frontend:**
 - **Next.js (React)** for fast, server-rendered and statically generated pages.
-- **NextUI & Tailwind CSS** for a highly responsive, glassmorphism-inspired, and accessible user interface.
+- **HeroUI & Tailwind CSS** for a sober, accessible, and consistent interface: flat navy palette, no gradients or glow effects.
 - **Lucide React** for consistent iconography.
 
 **Backend:**
@@ -105,7 +105,7 @@ Lumina is built with a robust, modern, and scalable architecture:
 The backend implements a highly decoupled rules engine that classifies incoming financial transactions. It prioritizes user-defined rules stored in the database, falling back to a hardcoded generic seed of rules if no custom matches are found. This ensures a high match rate while keeping the system flexible.
 
 ### 2. Component-Driven UI
-The frontend utilizes a component-driven architecture using NextUI. Screens like the `LoginPage` manage their state locally and communicate with the backend securely. It uses modern React patterns (Hooks, Context, Server Components where applicable) and visually stunning gradients and blurs.
+The frontend utilizes a component-driven architecture using HeroUI. Screens like the `LoginPage` manage their state locally and communicate with the backend securely. It uses modern React patterns (Hooks, Context, Server Components where applicable), and the visual language is deliberately sober: flat navy, clear typography, and white space, built so accounting firms and SMBs can work without distractions.
 
 ### 3. Secure and Scalable Data Models
 The database uses well-defined SQLAlchemy models, ensuring data integrity. We use standard practices like hashed passwords, role-based access control, and comprehensive timestamping.
@@ -116,7 +116,7 @@ The database uses well-defined SQLAlchemy models, ensuring data integrity. We us
 
 In the `code-samples/` directory, you can find a few selected snippets that demonstrate the coding style, structure, and architecture of the project:
 
-- **`code-samples/frontend/LoginPage.tsx`**: Demonstrates the integration of NextUI components, state management, and API calls in a React Server/Client Component context.
+- **`code-samples/frontend/LoginPage.tsx`**: Demonstrates the integration of HeroUI components, state management, and API calls in React, with the current sober design.
 - **`code-samples/backend/rules_engine.py`**: Showcases the core logic used to classify bank movements based on keywords, prioritizing user rules over generic rules.
 - **`code-samples/backend/user_model.py`**: A standard SQLAlchemy model demonstrating how we structure our database entities.
 
