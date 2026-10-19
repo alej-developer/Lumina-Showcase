@@ -25,7 +25,7 @@ Lumina está construida con una arquitectura robusta, moderna y escalable:
 
 **Frontend:**
 - **Next.js (React)** para páginas rápidas con renderizado del lado del servidor y generación estática.
-- **HeroUI & Tailwind CSS** para una interfaz sobria, accesible y consistente: paleta azul marino, sin gradientes ni efectos de brillo.
+- **HeroUI & Tailwind CSS** para una interfaz sobria, accesible y consistente: paleta azul marino plana, sin gradientes ni efectos de brillo.
 - **Lucide React** para una iconografía consistente.
 
 **Backend:**
@@ -39,10 +39,10 @@ Lumina está construida con una arquitectura robusta, moderna y escalable:
 ## 🏗 Puntos Clave de la Arquitectura
 
 ### 1. Motor de Reglas Extensible
-El backend implementa un motor de reglas altamente desacoplado que clasifica las transacciones financieras entrantes. Prioriza las reglas definidas por el usuario en la base de datos, recurriendo a reglas semilla genéricas (hardcoded) cuando no hay coincidencias exactas. Esto asegura una alta tasa de aciertos manteniendo la flexibilidad del sistema.
+El backend implementa un motor de reglas altamente desacoplado que clasifica las transacciones financieras entrantes. Prioriza las reglas definidas por el usuario en la base de datos, recurriendo a un conjunto de reglas semilla genéricas (hardcoded) cuando no hay coincidencias con las reglas personalizadas. Esto asegura una alta tasa de aciertos manteniendo la flexibilidad del sistema.
 
 ### 2. UI Basada en Componentes
-El frontend utiliza una arquitectura orientada a componentes con HeroUI. Pantallas como el `LoginPage` gestionan su estado de forma local y se comunican de forma segura con el backend. El lenguaje visual es deliberadamente sobrio: azul marino plano, tipografía clara y espacio en blanco, pensado para que asesorías y pymes trabajen sin distracciones.
+El frontend utiliza una arquitectura orientada a componentes con HeroUI. Pantallas como el `LoginPage` gestionan su estado de forma local con Hooks de React y se comunican de forma segura con el backend. El lenguaje visual es deliberadamente sobrio: azul marino plano, tipografía clara y espacio en blanco, pensado para que asesorías y pymes trabajen sin distracciones.
 
 ### 3. Modelos de Datos Seguros y Escalables
 La base de datos utiliza modelos bien definidos en SQLAlchemy, garantizando la integridad de los datos. Aplicamos prácticas estándar de la industria como hash de contraseñas, control de acceso basado en roles y un riguroso registro de fechas (timestamps).
@@ -54,7 +54,7 @@ La base de datos utiliza modelos bien definidos en SQLAlchemy, garantizando la i
 En el directorio `code-samples/`, puedes encontrar algunos fragmentos seleccionados que demuestran el estilo de programación, estructura y arquitectura del proyecto:
 
 - **`code-samples/frontend/LoginPage.tsx`**: Demuestra la integración de componentes de HeroUI, manejo de estado y llamadas a API en React, con el diseño sobrio actual.
-- **`code-samples/backend/rules_engine.py`**: Muestra la lógica principal utilizada para clasificar movimientos de banco basándose en palabras clave y prioridad de reglas.
+- **`code-samples/backend/rules_engine.py`**: Muestra la lógica principal utilizada para clasificar movimientos bancarios basándose en palabras clave, priorizando las reglas del usuario sobre las reglas genéricas.
 - **`code-samples/backend/user_model.py`**: Un modelo estándar de SQLAlchemy que ilustra cómo estructuramos las entidades de base de datos de manera segura.
 
 ## 📬 Contacto
@@ -67,7 +67,7 @@ Si deseas ver una demostración en vivo o hablar en detalle sobre la arquitectur
 
 > **Note:** This is a showcase repository tailored for recruiters and technical evaluations. The full codebase contains proprietary business logic and sensitive configurations, which is why only carefully selected architectural samples and UI screenshots are presented here.
 
-Welcome to **Lumina**, a modern financial classification and management platform. Lumina leverages powerful rules engines to automatically categorize bank movements, providing businesses with clear insights into their cash flow.
+Welcome to **Lumina**, a modern financial classification and management platform. Lumina uses a rules engine to automatically categorize bank movements, providing businesses with clear insights into their cash flow.
 
 ## 📸 Application Screenshots
 
@@ -102,13 +102,13 @@ Lumina is built with a robust, modern, and scalable architecture:
 ## 🏗 Architecture Highlights
 
 ### 1. Extensible Rules Engine
-The backend implements a highly decoupled rules engine that classifies incoming financial transactions. It prioritizes user-defined rules stored in the database, falling back to a hardcoded generic seed of rules if no custom matches are found. This ensures a high match rate while keeping the system flexible.
+The backend implements a highly decoupled rules engine that classifies incoming financial transactions. It prioritizes user-defined rules stored in the database, falling back to a hardcoded set of generic seed rules if no custom matches are found. This ensures a high match rate while keeping the system flexible.
 
 ### 2. Component-Driven UI
-The frontend utilizes a component-driven architecture using HeroUI. Screens like the `LoginPage` manage their state locally and communicate with the backend securely. It uses modern React patterns (Hooks, Context, Server Components where applicable), and the visual language is deliberately sober: flat navy, clear typography, and white space, built so accounting firms and SMBs can work without distractions.
+The frontend uses a component-driven architecture built on HeroUI. Screens like the `LoginPage` manage their state locally with React Hooks and communicate with the backend securely. The visual language is deliberately sober: flat navy, clear typography, and white space, built so accounting firms and SMBs can work without distractions.
 
 ### 3. Secure and Scalable Data Models
-The database uses well-defined SQLAlchemy models, ensuring data integrity. We use standard practices like hashed passwords, role-based access control, and comprehensive timestamping.
+The database uses well-defined SQLAlchemy models, ensuring data integrity. We use industry-standard practices like hashed passwords, role-based access control, and comprehensive timestamping.
 
 ---
 
@@ -118,7 +118,7 @@ In the `code-samples/` directory, you can find a few selected snippets that demo
 
 - **`code-samples/frontend/LoginPage.tsx`**: Demonstrates the integration of HeroUI components, state management, and API calls in React, with the current sober design.
 - **`code-samples/backend/rules_engine.py`**: Showcases the core logic used to classify bank movements based on keywords, prioritizing user rules over generic rules.
-- **`code-samples/backend/user_model.py`**: A standard SQLAlchemy model demonstrating how we structure our database entities.
+- **`code-samples/backend/user_model.py`**: A standard SQLAlchemy model demonstrating how we structure our database entities securely.
 
 ## 📬 Contact
 If you'd like to see a live demo or discuss the full architecture in detail, please reach out directly!
